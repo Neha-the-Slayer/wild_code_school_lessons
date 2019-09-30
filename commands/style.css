@@ -1,0 +1,78 @@
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+
+}
+
+body
+{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:100px;
+    color: #333;
+  	background-color: #eee;
+  	font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    box-shadow:   0 1px 2px #fff, /*bottom external highlight*/
+                  0 -1px 1px #666, /*top external shadow*/
+                  inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+                  inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+    padding: 35px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin: 0 0 .5em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+h1 { font-size: 2.25em; } /* 36px */
+h2 { font-size: 1.75em; } /* 28px */
+h3 { font-size: 1.375em; } /* 22px */
+h4 { font-size: 1.125em; } /* 18px */
+h5 { font-size: 1em; } /* 16px */
+h6 { font-size: .875em; } /* 14px */
+
+h1 {
+  margin-bottom: 40px;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+}
+
+.keyword, .list_element, .sublist_element, .token, .bold
+{
+  font-weight: bold;
+}
+
+.list_element
+{
+  line-height: 1.5;
+}
+
+.sublist_element
+{
+  line-height: 0.5;
+  font-style: italic;
+}
+
+
+a:link { color: royalblue; }
+a:visited { color: purple; }
+a:focus { color: black; }
+a:hover { color: green; }
+a:active { color: red; }

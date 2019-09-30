@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bash Terminal Commands</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>A list of essential Bash commands</h1>
+    <section>
+      <ul>
+        <li><strong>cd < directory path ></strong>: Change directory. Use it to move from one folder to the other. Both relative and absolute paths can be provided</li>
+        <li><strong>ls</strong>: List Storage. Shows all the visible directories and files</li>
+        <li><strong>pushd < directory path ></strong>: Will move from current directory to the specified one but will kep the current directory in memory</li>
+        <li><strong>popd</strong>: To be used after <strong>pushd</strong> is used. It brings you back to the directory you were in before using <stron>pushd</stron> </li>
+        <li><strong>file < file or directory name></strong>: Prints information about a file type (or directory) </li>
+        <li><strong>locate < string ></strong>: Search for all files/directory that contains the provided string in their name</li>
+        <li><strong>sudo updatedb</strong>: To updated the database for use of locate command</li>
+        <li><strong>which < command > </strong>: It checks if a command is installed, printing where it is installed</li>
+        <li><strong>history</strong>: It lists the last 1000 unique commands issued</li>
+        <li><strong>whatis < command ></strong>: It gives you a very short explaination of what a command does </li>
+        <li><strong>apropos < string ></strong>: Return a list of all commands that have something to do with the string provided. It's a way to tell the system what you want to do and get a list of related commands</li>
+        <li><strong>man < command ></strong>: It shows the manual page for the chosen command providing detail information</li>
+        <li><strong>mkdir < dirName > < dirName > ...</strong>: Make a directory </li>
+        <li><strong>touch < fileName > < fileName > ... < fileName ></strong>: Creates/Update a file</li>
+        <li><strong>cp < /fileName > < new fileName ></strong>: Will make a copy of the file in the directory you are working to </li>
+        <li><strong>mv < /fileName or directory > < new fileName or directory ></strong>: Change the name of a file/directory </li>
+        <li><strong>mv < /fileName or directory > < directory ></strong>: Move the file or the directory to a different directory </li>
+        <li><strong>rm < /fileName ></strong>: Removes the file</li>
+        <li><strong>rmdir < dirName ></strong>: Removes a directory only if it doesn't have files in it</li>
+        <li><strong>cat < /fileName ></strong>: Prints the content of the file</li>
+        <li><strong>more < /fileName ></strong>: It pages through a bunch of text in the bash. Sort of devide the content into pages and let your go through them. Press "q" to exit</li>
+        <li><strong>less < /fileName ></strong>: A bette version of more. Can use arrow keys and go down/up one line at a time. You can search for text etc..</li>
+        <li><strong>nano < /fileName ></strong>: Integrated text editor in most linux distribution. If the file doesn't exist it is created</li>
+        <li><strong>sudo < command ></strong>: It will allow to run commands as administrator</li>
+        <li><strong>su - < userName ></userName></strong>: This command changes you to another user. The dash after the command will make you also move to the user home directory. With no dash, you will stay in your home directory</li>
+        <li><strong>users</strong>: Will show you users logged in the system</li>
+        <li><strong>chmod < code > < /fileName ></strong>: Change the permission for files and directories</li>
+        <li><strong>watch < command ></strong>: Will run a program every 2 seconds and update the bash if anything chages</li>
+        <li><strong>killall < programName ></strong>: It kills all the process related to the program</li>
+        <li><strong>file</strong>: </li>
+      </ul>
+    </section>
+  <section>
+    <h2>Additional Information</h2>
+    <h3>List Storage(ls) flags</h3>
+    <ol>
+      <li><strong>ls -l</strong>: Lists all visible directories with access rights in a list form.</li>
+      <li><strong>ls -a</strong>: Shows all visible and hidden directories</li>
+      <li><strong>ls -al</strong>: Combination of -a adn -l flags</li>
+      <li><strong>ll</strong>: Same as ls -l</li>
+    </ol>
+    <h3>Locate</h3>
+    <p>Locate works based on an internal database that gets updated once a day. If you are looking for something that was created recently, locate might not work. You can manually updated the database.</p>
+    <h3>Remove(rm) flags</h3>
+    <ol>
+      <li><strong>rm *</strong>: Removes all the file from a directory</li>
+      <li><strong>rm work*</strong>: Removes all the file with a name that starts with work</li>
+      <li><strong>rm -r</strong>: To remove a directory</li>  
+    </ol>
+    <h3>Concatenate(cat) Operators and Flags</h3>
+    <ol>
+      <li><strong>cat > < /fileName ></strong>: Will let you type in the bash and whatever you type will be saved in the specified file. If the file has text, it will be replace. Use <strong>ctrl+d</strong> to finsih</li>
+      <li><strong>cat >> < /fileName ></strong>: Will let you type in the bash and appends it at the end of fileName</li>
+      <li><strong>cat < /fileName1 > < /fileName2 ></strong>: Takes the content from fileName2 and appends it at the end of fileName1</li>
+      <li><strong>rm -r</strong>: To remove a directory</li>
+    </ol>
+    <h3>Redirection</h3>
+    <ol>
+      <li><strong> / > </strong>: redirect a text output. For example: <strong>ls -al / > file.txt</strong> the list storage will be saved in file.txt</li>
+      <li><strong>cat >> < /fileName ></strong>: Will let you type in the bash and appends it at the end of fileName</li>
+      <li><strong>cat < /fileName1 > < /fileName2 ></strong>: Takes the content from fileName2 and appends it at the end of fileName1</li>
+      <li><strong>rm -r</strong>: To remove a directory</li>
+    </ol>
+    <h3>Piping ( | )</h3>
+    <p>Taking the output of a command and using that as input for another command. For Example: <strong>history | less</strong>. With this command you will be able to page through the list of commands you ran.</p>
+    <h3>Permission</h3>
+
+    <p>The picture example below shows how the permissions can be calculated using simple addition where each permission is assigned a number. Adding them will produce the appropriate number of rights</p>
+    <ol>
+      <li><strong> / > </strong>: </li>
+    </ol>
+    <a href="https://imgur.com/7v7OPkl"><img src="https://i.imgur.com/7v7OPkl.png" title="source: imgur.com" /></a>
+    <p>Directories and files handle permission differently. With directories, you will need to set the executable permission if you want other users to see them</p>
+  </section>
+  </body>
+</html>
