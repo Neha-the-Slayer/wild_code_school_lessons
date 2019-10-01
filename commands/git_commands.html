@@ -11,7 +11,7 @@
       <ul>
         <li><strong>git init</strong>: Initialized empty Git repository</li>
         <li><strong>git add .</strong>: Add to staging what will be committed excluding deletions</li>
-        <li><strong>git diff </strong>: difference between working directory and staging</li>
+        <li><strong>git diff </strong>: difference between working directory and staging. Use flag <strong>--staged(or cached)</strong> to get differences in the staging area</li>
         <li><strong>git reset HEAD < filename ></filename> </strong>: remove from staging. Just "<strong>git reset</strong>" to remove all form staging</li>
         <li><strong>git commit -m</strong>: Commit a version to git. The "-m" allows you to specify a message to add info about the commit</li>
         <li><strong>git checkout < filename ></strong>: Discard changes in working directory</li>
@@ -24,7 +24,8 @@
         <li><strong>git branch -m < original name> < new name ></strong>: to change the name of a branch</li>
         <li><strong>git branch -D < branch name ></strong>: To delete  a branch</li>
         <li><strong>git rm < /filename ></strong>: delete a file and automatically moves it to the staging environment ready to be committed</li>
-        <li><strong>git rm --cached < /filename name ></strong>: To stop tracking a file that is currently tracked</li>
+        <li><strong>git rm --cached < /filename ></strong>: To stop tracking a file that is currently tracked</li>
+        <li><strong>git mv < /filename ></strong>: rename a file and automatically moves it to the staging environment ready to be committed</li>
         <li><strong>git clone < repository URL ></strong>: Copy a git repository on you local machine. Will only pull the master branch</li>
         <li><strong>git clone -b < branch name > < repository URL ></strong>: Copy a specific branch from a git repository on you local machine</li>
         <li><strong>git log</strong>: A list of all commit made for the project</li>
