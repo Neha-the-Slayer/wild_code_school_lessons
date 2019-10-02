@@ -32,10 +32,10 @@
         <li><strong>git clone < repository URL ></strong>: Copy a git repository on you local machine. Will only pull the master branch</li>
         <li><strong>git clone -b < branch name > < repository URL ></strong>: Copy a specific branch from a git repository on you local machine</li>
         <li><strong>git log</strong>: A list of all commit made for the project</li>
-        <li><strong>git push</strong>: After committing, push the changes to the remote repo</li>
-        <li><strong>git push --set-upstream origin < branch Name ></strong>: After creating a branch and after committing, push the changes and the new branch to the remote repo</li>          
+        <li><strong>git push</strong>: After committing, push the changes to the remote repo</li>          
         <li><strong>git show < SHA-1 of a commit ></strong>: It is like runnning diff for the changes that commit made. It shows the changes like a diff would.</li>
-        <li><strong>git diff < SHA-1 of a older commit > < SHA-1 of a newer commit ></SHA-1></strong>: Compare differences between two commits. It will show differences of commits in between as well</li>
+        <li><strong>git diff < SHA-1 of a older commit > < SHA-1 of a newer commit ></strong>: Compare differences between two commits. It will show differences of commits in between as well</li>
+        <li><strong>git remote add origin < repository URL > </strong>: Links a remote repo to your local git environment</li>
       </ul>
     </section>
   <section>
@@ -66,9 +66,15 @@
     <p>The HEAD pointer is a reference variable that points to a specific commit in the repository: The parent of the next commit that we'll make (or The Tip of the current branch in the repository).</p>
     <h4>git workflow - A Graphical representation</h4>
     <img src=".\img\git_workflow.PNG" alt="git_workflow">
-    <h3>git push -u origin</h3>
-    <p>The -u option is important because it binds your local branch to the remote branch. origin is the name of the remote which we gave to it when we ran git remote add. master is the name of the branch created on the remote, the same as your current local branch. Note: the -u option is to be used only during your first push of this branch. After entering the command, your local and remote master branches are linked. With the future pushes from your local master branch, Git will know that it must push to the remote master branch.</p>
-    <p>It is possible to use the push in several ways depending on the arguments, but at the moment, just remember that we specify the remote and the branch the first time with the <strong>-u</strong> flag, and that thereafter, git push is enough</p>
+    <h3>git push Flags</h3>
+    <ol>
+      <li><strong>git log -u origin </strong>: 
+        <p>The -u option is important because it binds your local branch to the remote branch. origin is the name of the remote which we gave to it when we ran git remote add. master is the name of the branch created on the remote, the same as your current local branch. Note: the -u option is to be used only during your first push of this branch. After entering the command, your local and remote master branches are linked. With the future pushes from your local master branch, Git will know that it must push to the remote master branch.</p>
+        <p>It is possible to use the push in several ways depending on the arguments, but at the moment, just remember that we specify the remote and the branch the first time with the <strong>-u</strong> flag, and that thereafter, git push is enough</p> 
+      </li>
+      <li><strong>git push --set-upstream origin < branch Name ></strong>: After creating a branch and after committing, push the changes and the new branch to the remote repo</li>
+     </ol>
+    
   </section>
   </body>
 </html>
