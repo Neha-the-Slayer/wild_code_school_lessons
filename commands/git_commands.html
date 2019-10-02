@@ -69,12 +69,11 @@
     <h3>git push Flags</h3>
     <ol>
       <li><strong>git log -u origin </strong>: 
-        <p>The -u option is important because it binds your local branch to the remote branch. origin is the name of the remote which we gave to it when we ran git remote add. master is the name of the branch created on the remote, the same as your current local branch. Note: the -u option is to be used only during your first push of this branch. After entering the command, your local and remote master branches are linked. With the future pushes from your local master branch, Git will know that it must push to the remote master branch.</p>
+        <p>The -u option is important because it binds your local branch to the remote branch. origin is the name of the remote which we gave to it when we ran <strong>git remote add origin</strong>. master is the name of the branch created on the remote, the same as your current local branch. Note: the -u option is to be used only during your first push of this branch. After entering the command, your local and remote master branches are linked. With the future pushes from your local master branch, Git will know that it must push to the remote master branch.</p>
         <p>It is possible to use the push in several ways depending on the arguments, but at the moment, just remember that we specify the remote and the branch the first time with the <strong>-u</strong> flag, and that thereafter, git push is enough</p> 
       </li>
       <li><strong>git push --set-upstream origin < branch Name ></strong>: After creating a branch and after committing, push the changes and the new branch to the remote repo</li>
      </ol>
-    
   </section>
   </body>
 </html>
