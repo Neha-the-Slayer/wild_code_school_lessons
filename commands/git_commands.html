@@ -14,9 +14,8 @@
         <li><strong>git diff </strong>: difference between working directory and staging. Use flag <strong>--staged(or cached)</strong> to get differences in the staging area</li>
         <li><strong>git diff --color-words</strong>: bu itself, diff show de line difference. The flag <strong>--color-words</strong> colors only the words that are different between wroking and staging environmentss</li>
         <li><strong>git reset HEAD < filename ></filename> </strong>: remove from staging. Just "<strong>git reset</strong>" to remove all form staging</li>
-        <li><strong>git commit -m</strong>: Commit a version to git. The "-m" allows you to specify a message to add info about the commit</li>
-        <li><strong>git commit -a(or --all)</strong>: Stages and commit all changes to tracked files. It does not include untracked files</li>
-        <li><strong>git checkout < filename ></strong>: Discard changes in working directory</li>
+        <li><strong>git commit</strong>: Commit the staged changes to git. Without flags it will open up the default editor and let you put a multilane message to descripbe the commit</li>
+        <li><strong>git checkout -- < filename ></strong>: Discard changes in working directory. THere is a space after the double dash</li>
         <li><strong>git checkout  < branch ></strong>: Switch to a different branch</li>
         <li><strong>git checkout -b < new branch name > < Log Code ></strong>: When checked out in a previews Log, create a new branch</li>
         <li><strong>git checkout -b < new branch name > origin < Existing Branch Name ></Log></strong>: When Pulling somone elses repo, it  will only pull master. Issue the command to pull a specific branch name in a new branch</li>
@@ -40,7 +39,7 @@
     </section>
   <section>
     <h2>Additional Information</h2>
-    <h3>git add commands</h3>
+    <h3>git add flags</h3>
     <img src="https://i.stack.imgur.com/KwOLu.jpg" alt="table for quick understanding git add">
     <h3>Clone a full repository with all branches</h3>
     <ol>
@@ -49,7 +48,7 @@
       <li>Next run, <strong>git config --bool core.bare false</strong>: This will modify a boolean value that will take the repo from being a bare repository into a regular one</li>
       <li>Next run, <strong>git reset --Hard</strong>: This is a hard reset that will take everything that is inside the <strong>.git</strong> and create all the branches makeing it look like normal repository</li>
     </ol>
-    <h3>Git Log Flags</h3>
+    <h3>git log flags</h3>
     <ol>
       <li><strong>git log -n < number ></strong>: List of the last n commits</li>
       <li><strong>git log --since=< yyy-mm-dd ></strong>: Will return the commit since a certain date.</li>
@@ -57,6 +56,12 @@
       <li><strong>git log --author=< any part of a name ></strong>: Will return the commits from authors whose name matched the string</li>
       <li><strong>git log --oneline</strong>: Only returns the first line of each log</li>
     </ol>
+    <h3>git commit flags</h3>
+    <ul>
+      <li><strong>git commit -m</strong>: Commit a version to git. The "-m" allows you to specify a message to add info about the commit</li>
+      <li><strong>git commit -a(or --all)</strong>: Stages and commit all changes to tracked files. It does not include untracked files</li>
+      <li><strong>git commit --amend</strong>: Edit the previews commit (it actually replaces it) by adding the staged edits to it.</li>
+    </ul>
     <h3>Commit Messages best practices</h3>
     <img src=".\img\commit_message_best_practices.PNG" alt="git commit message best practices">
     <h4>Atomic Commits</h4>
