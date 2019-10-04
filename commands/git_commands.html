@@ -15,8 +15,10 @@
         <li><strong>git diff --color-words</strong>: bu itself, diff show de line difference. The flag <strong>--color-words</strong> colors only the words that are different between wroking and staging environmentss</li>
         <li><strong>git reset HEAD < filename ></filename> </strong>: remove from staging. Just "<strong>git reset</strong>" to remove all form staging</li>
         <li><strong>git commit</strong>: Commit the staged changes to git. Without flags it will open up the default editor and let you put a multilane message to descripbe the commit</li>
-        <li><strong>git checkout -- < filename ></strong>: Discard changes in working directory. THere is a space after the double dash</li>
-        <li><strong>git checkout  < branch ></strong>: Switch to a different branch</li>
+        <li><strong>git checkout -- < filename ></strong>: Discard changes in working directory. There is a space after the double dash</li>
+        <li><strong>git checkout < branch ></strong>: Switch to a different branch</li>
+        <li><strong>git checkout < Log Code ></strong>: Switch to a previews commit</li>
+        <li><strong>git checkout < Log Code > < /fileName ></strong>: Takes the state of the file requested at the commit and puts them in your current staging environment</li>
         <li><strong>git checkout -b < new branch name > < Log Code ></strong>: When checked out in a previews Log, create a new branch</li>
         <li><strong>git checkout -b < new branch name > origin < Existing Branch Name ></Log></strong>: When Pulling somone elses repo, it  will only pull master. Issue the command to pull a specific branch name in a new branch</li>
         <li><strong>git merge < branch ></strong>: merge < branch > in the branch you are currently in</li>
@@ -26,7 +28,7 @@
         <li><strong>git branch -m < original name> < new name ></strong>: to change the name of a branch</li>
         <li><strong>git branch -D < branch name ></strong>: To delete  a branch</li>
         <li><strong>git rm < /filename ></strong>: delete a file and automatically moves it to the staging environment ready to be committed</li>
-        <li><strong>git rm --cached < /filename ></strong>: To stop tracking a file that is currently tracked</li>
+        <li><strong>git rm --cached < /filename ></strong>: To stop tracking a file that is currently tracked. It removes it from the staging but does not delete the file</li>
         <li><strong>git mv < /filename ></strong>: rename a file and automatically moves it to the staging environment ready to be committed</li>
         <li><strong>git clone < repository URL ></strong>: Copy a git repository on you local machine. Will only pull the master branch</li>
         <li><strong>git clone -b < branch name > < repository URL ></strong>: Copy a specific branch from a git repository on you local machine</li>
@@ -35,19 +37,15 @@
         <li><strong>git show < SHA-1 of a commit ></strong>: It is like runnning diff for the changes that commit made. It shows the changes like a diff would.</li>
         <li><strong>git diff < SHA-1 of a older commit > < SHA-1 of a newer commit ></strong>: Compare differences between two commits. It will show differences of commits in between as well</li>
         <li><strong>git remote add origin < repository URL > </strong>: Links a remote repo to your local git environment</li>
+        <li><strong>git revert < SHA-1 > </strong>: Reverts a commit. It does not alter the hystory of changes, it just automatically create a ne commit that revert the changes made by the selected commit</li>
+        <li><strong>git ls-tree HEAD (or a log SHA-1) </strong>: Shows what git is tracking</li>
+
       </ul>
     </section>
   <section>
     <h2>Additional Information</h2>
     <h3>git add flags</h3>
     <img src="https://i.stack.imgur.com/KwOLu.jpg" alt="table for quick understanding git add">
-    <h3>Clone a full repository with all branches</h3>
-    <ol>
-      <li><strong>git clone --mirror < repository URL ><span style="color:red">.git</span></strong>: Copy a git repository on you local machine including all Branches.</li>
-      <li>The command above will copy the invisible <strong>.git</strong> folder that keeps track of everything that happens in a repository.</li>
-      <li>Next run, <strong>git config --bool core.bare false</strong>: This will modify a boolean value that will take the repo from being a bare repository into a regular one</li>
-      <li>Next run, <strong>git reset --Hard</strong>: This is a hard reset that will take everything that is inside the <strong>.git</strong> and create all the branches makeing it look like normal repository</li>
-    </ol>
     <h3>git log flags</h3>
     <ol>
       <li><strong>git log -n < number ></strong>: List of the last n commits</li>
@@ -66,6 +64,13 @@
     <img src=".\img\commit_message_best_practices.PNG" alt="git commit message best practices">
     <h4>Atomic Commits</h4>
     <p>Are commits that are related to one topic. It is a best pratice and it makes it easier to find changes or to fix bugs.</p>
+    <h3>Clone a full repository with all branches</h3>
+    <ol>
+      <li><strong>git clone --mirror < repository URL ><span style="color:red">.git</span></strong>: Copy a git repository on you local machine including all Branches.</li>
+      <li>The command above will copy the invisible <strong>.git</strong> folder that keeps track of everything that happens in a repository.</li>
+      <li>Next run, <strong>git config --bool core.bare false</strong>: This will modify a boolean value that will take the repo from being a bare repository into a regular one</li>
+      <li>Next run, <strong>git reset --Hard</strong>: This is a hard reset that will take everything that is inside the <strong>.git</strong> and create all the branches makeing it look like normal repository</li>
+    </ol>
     <h3>Git Concepts and architecture</h3>
     <h4>Hash Values (SHA-1)</h4>
     <p>git keeps track of change sets. For each of them it generates a checksum (or hash values). This is generated by taking data and feeding it to a mathematical alogrithm (SHA-1) which converts the data into a number. This number is called checksum: The same data, put in the same algorithm, always return the same result (checksum). This guarantee data integrity. The checksum is a 40 character hexadecimal string(0-9,a-f).</p>
